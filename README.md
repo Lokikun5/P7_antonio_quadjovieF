@@ -27,11 +27,11 @@ Ouvrir MySql command Line client puis effectuer ces deux lignes de commandes :
 CREATE DATABASE groupomania;
 USE groupomania;
 ```
-Importer le fichier groupomania.sql (qui ce trouve a la racine du projet) : 
+Importer le fichier groupomania.sql : 
 ```
 source (chemin vers le fichier groupomania.sql);
 ```
-Attention a indiquer le chemin avec des "/" et non des "\ ".
+Indiquer le chemin avec des "/" .
 
 ## BACK END
 Ouvrir un terminal dans le dossier backend puis effectuer les lignes de commandes suivantes :
@@ -46,7 +46,7 @@ npm install
 npm run serve
 ```
 
-Ouvrir le navigateur a l'adresse http://localhost:8080/
+Ouvrir le navigateur a l'adresse http://localhost:8080/ (il est possible de rencontrer des bug sur l'application avec mozilla firefox utilisez google chrom de préférence)
 
 les codes d'accès admin :
 ```
