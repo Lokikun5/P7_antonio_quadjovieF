@@ -261,7 +261,7 @@ export default {
   methods: {
     formatDate(input) {
       var datePart = input.match(/\d+/g),
-        year = datePart[0].substring(2), // get only two digits
+        year = datePart[0].substring(2), 
         month = datePart[1],
         day = datePart[2];
       return day + "/" + month + "/" + year;
@@ -298,8 +298,8 @@ export default {
       }
       if (this.text || this.image) {
         const self = this;
-        axios
-          .post("http://localhost:3000/api/post", fd, {
+        
+          axios.post("http://localhost:3000/api/post", fd, {
             headers: {
               "Content-Type": "multipart/form-data",
               Authorization: `Bearer ${this.token}`,
@@ -317,8 +317,8 @@ export default {
     },
     liked() {
       const self = this;
-      axios
-        .post("http://localhost:3000/api/like/liked", {
+      
+        axios.post("http://localhost:3000/api/like/liked", {
           userId: this.userId,
         })
         .then(function (response) {
@@ -335,8 +335,8 @@ export default {
     deletePost(postId, authorId) {
       const self = this;
       if (this.userId == authorId || (self.user && self.user.admin)) {
-        axios
-          .delete(`http://localhost:3000/api/post/${postId}`, {
+        
+          axios.delete(`http://localhost:3000/api/post/${postId}`, {
             headers: { Authorization: `Bearer ${this.token}` },
             data: { userId: self.userId, admin: self.user.admin },
           })
@@ -351,8 +351,8 @@ export default {
     },
     like(currentPostId) {
       const self = this;
-      axios
-        .post("http://localhost:3000/api/like", {
+      
+        axios.post("http://localhost:3000/api/like", {
           userId: this.userId,
           postId: currentPostId,
         })
@@ -368,8 +368,8 @@ export default {
     deleteComment(id, authorId, currentPostId) {
       const self = this;
       if (this.userId == authorId || (self.user && self.user.admin)) {
-        axios
-          .delete(`http://localhost:3000/api/comment/${id}/${currentPostId}`, {
+        
+          axios.delete(`http://localhost:3000/api/comment/${id}/${currentPostId}`, {
             headers: { Authorization: `Bearer ${this.token}` },
             data: { userId: self.userId, admin: self.user.admin },
           })
@@ -388,8 +388,8 @@ export default {
     comment(event, id) {
       if (this.newComment) {
         const self = this;
-        axios
-          .post(
+        
+          axios.post(
             "http://localhost:3000/api/comment",
             {
               comment: this.newComment,
@@ -427,8 +427,8 @@ export default {
           .split("=")[1];
       }
       const self = this;
-      axios
-        .get("http://localhost:3000/api/post", {
+      
+        axios.get("http://localhost:3000/api/post", {
           headers: { Authorization: `Bearer ${this.token}` },
         })
         .then((response) => {
@@ -443,8 +443,8 @@ export default {
             self.$router.push("/");
           }
         });
-      axios
-        .get("http://localhost:3000/api/comment", {
+      
+        axios.get("http://localhost:3000/api/comment", {
           headers: { Authorization: `Bearer ${this.token}` },
         })
         .then((response) => (this.comments = response.data))
@@ -533,6 +533,7 @@ export default {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  border-radius: 30px;
 }
 
 .svg-react {

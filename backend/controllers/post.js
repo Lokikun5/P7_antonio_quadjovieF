@@ -2,7 +2,7 @@ const { pool } = require('../config/db');
 const fs = require("fs");
 
 exports.getAll = (req, res, next) => {
-    // TOUT LES POST DU DERNIER AU PREMIER
+    
     let sql = "SELECT * FROM post p JOIN user WHERE user.id=authorId ORDER BY date DESC LIMIT 50;";
     pool.execute(sql, function (err, result) {
         if (err) res.status(400).json({ err });
@@ -29,7 +29,7 @@ exports.create = (req, res, next) => {
         date: new Date().toLocaleString("af-ZA", { timeZone: "Europe/Paris" }),
         authorId: req.body.userId,
     };
-    //ENVOIE LA REQUETE AVEC MULTER ET LES VALEURS PAR DEFAUT
+    //MULTER ET LES VALEURS PAR DEFAUT
     let sql = `INSERT INTO post (text, imageUrl, date, authorId) VALUES (?,?,?,?);`;
     pool.execute(sql, [post.text, post.imageUrl, post.date, post.authorId], function (err, result) {
         if (err) throw err;
@@ -59,7 +59,7 @@ exports.delete = (req, res, next) => {
                     res.status(201).json({ message: `Post supprimé` });
                 });
             } else {
-                res.status(401).json({message : "Bien essayé petit malin"});
+                res.status(401).json({message : "requete echoue"});
             }
 
         }

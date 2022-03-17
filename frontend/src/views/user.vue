@@ -723,8 +723,8 @@ export default {
     },
     getPost() {
       const self = this;
-      axios
-        .post(
+      
+        axios.post(
           "http://localhost:3000/api/post/byAuthor",
           { id: self.userIdPage },
           {
