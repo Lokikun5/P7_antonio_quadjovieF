@@ -153,9 +153,9 @@ export default {
         : null;
       console.log(this.password);
       const self = this;
-      axios
-        .delete(
-          `http://localhost:3000/api/user/delete/${self.userId}`,
+      
+        
+          axios.delete(`http://localhost:3000/api/user/delete/${self.userId}`,
           { data: { password: self.password } },
           {
             headers: {

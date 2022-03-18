@@ -1,17 +1,7 @@
 <template>
   <header>
     <div class="navigation">
-      <nav
-        class="
-          navbar navbar-expand-sm navbar-light
-          white
-          fixed-top
-          nav
-          d-flex
-          justify-content-center
-          flex-nav
-        "
-      >
+      <nav class=" navbar navbar-expand-sm navbar-light white fixed-top nav d-flex justify-content-center flex-nav ">
         <a class="nav-link">
           <router-link to="/home"
             ><img

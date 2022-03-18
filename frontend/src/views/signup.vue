@@ -435,8 +435,8 @@ export default {
       this.email = document.querySelector("#email").value;
       if (this.validation()) {
         const self = this;
-        axios
-          .post("http://localhost:3000/api/user/signup", {
+        
+          axios.post("http://localhost:3000/api/user/signup", {
             nom: this.nom,
             prenom: this.prenom,
             email: this.email,
@@ -444,8 +444,8 @@ export default {
           })
           .then(function (response) {
             console.log(response);
-            axios
-              .post("http://localhost:3000/api/user/login", {
+            
+              axios.post("http://localhost:3000/api/user/login", {
                 email: self.email,
                 password: self.password,
               })
