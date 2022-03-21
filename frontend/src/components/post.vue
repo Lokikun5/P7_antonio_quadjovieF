@@ -34,7 +34,7 @@
                 class="form-control mb-2"
                 id="text"
                 aria-describedby="emailHelp"
-                placeholder=" Quoi de neuf ?"
+                placeholder=" Nouveau poste"
               />
             </div>
             <div class="d-flex justify-content-between">
@@ -75,9 +75,7 @@
               "
             >
               <div class="d-flex flex-row align-items-center px-2">
-                <router-link
-                  :to="{ name: 'user', params: { userId: post.authorId } }"
-                >
+                <router-link :to="{ name: 'user', params: { userId: post.authorId } }">
                   <img
                     class="rounded-circle pp"
                     v-bind:src="post.pp"
@@ -586,15 +584,18 @@ export default {
 .publier {
   width: 100px;
   border-radius: 30px;
+  border-bottom: 2px solid #5fbae9;
 }
 .home {
   height: 140px;
   border-radius: 30px;
+  
 
 }
 .form {
   width: 90%;
   border-radius: 30px;
+  
 }
 
 #text {

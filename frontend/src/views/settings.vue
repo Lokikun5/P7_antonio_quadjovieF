@@ -360,6 +360,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
+  border: thick double #5972c2;
   background: #fff;
   padding: 30px;
   width: 90%;

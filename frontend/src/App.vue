@@ -27,6 +27,7 @@
                   v-bind:src="user.pp"
                   alt="pp"
                   class="userPageLink"
+                  title="Mon Profil"
                   @click="refresh"
                 />
               </router-link>
@@ -39,6 +40,7 @@
                   src="../image/set-up-svg-icon-free-settings-icon-black-11553450888ksmklhagoh.png"
                   alt="setting"
                   class="setting"
+                  title="settings"
                 />
               </router-link>
             </a>
@@ -51,6 +53,7 @@
                   src="../image/exit-icon-740908.jpg"
                   alt="logout"
                   class="logout"
+                  title="deconnexion"
               /></router-link>
             </a>
           </li>
@@ -83,9 +86,7 @@
           </div>
           <div class="results" v-if="userSearch && research != ''">
             <div v-for="result in userSearch" :key="result.id" class="result">
-              <router-link
-                :to="{ name: 'user', params: { userId: result.id } }"
-              >
+              <router-link :to="{ name: 'user', params: { userId: result.id } }">
                 <img
                   class="imgSearch"
                   v-bind:src="result.pp"

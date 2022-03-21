@@ -703,8 +703,8 @@ export default {
     async getUser() {
       const self = this;
       
-        axios.post(
-          "http://localhost:3000/api/user",
+       
+           axios.post("http://localhost:3000/api/user",
           { userId: self.userIdPage },
           {
             headers: {
@@ -724,8 +724,8 @@ export default {
     getPost() {
       const self = this;
       
-        axios.post(
-          "http://localhost:3000/api/post/byAuthor",
+        
+          axios.post("http://localhost:3000/api/post/byAuthor",
           { id: self.userIdPage },
           {
             headers: {
@@ -773,8 +773,8 @@ export default {
     const self = this;
     this.getUser();
     
-      axios.post(
-        "http://localhost:3000/api/user",
+      
+        axios.post("http://localhost:3000/api/user",
         { userId: self.userId },
         {
           headers: {

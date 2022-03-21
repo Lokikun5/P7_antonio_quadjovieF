@@ -2,7 +2,7 @@
   <div class="signup">
     <div class="wrapper fadeInDown">
       <div id="formContent">
-        <!-- Tabs Titles -->
+        <!-- Partie Titles -->
         <h2 @click="switchToSignup" v-if="mode == 'signup'" class="active">
           Sign Up
         </h2>
@@ -23,7 +23,7 @@
         >
           Login
         </h2>
-        <!-- Login Form -->
+        <!-- Partie Login -->
         <form v-on:submit.prevent="login">
           <input
             v-if="mode == 'signup'"
@@ -168,6 +168,7 @@ h2 {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   background: rgb(122, 118, 118);
+  border: thick double #5972c2;
   padding: 30px;
   width: 100%;
   max-width: 450px;
