@@ -55,9 +55,7 @@
                 "
               >
                 <div class="d-flex flex-row align-items-center px-2">
-                  <router-link
-                    :to="{ name: 'user', params: { userId: post.authorId } }"
-                  >
+                  <router-link :to="{ name: 'user', params: { userId: post.authorId } }" >
                     <img
                       class="rounded-circle pp"
                       v-bind:src="post.pp"
