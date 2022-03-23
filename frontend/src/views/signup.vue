@@ -492,6 +492,7 @@ export default {
           ).toString();
           document.cookie = `user-token=${token}; SameSite=Lax; Secure; max-age=86400;`;
           document.cookie = `userId=${userId}; SameSite=Lax; Secure; max-age=86400;`;
+          alert("bienvenue")
           self.$router.push("/home");
           self.$router.go();
         })

@@ -29,7 +29,7 @@ exports.create = (req, res, next) => {
         date: new Date().toLocaleString("af-ZA", { timeZone: "Europe/Paris" }),
         authorId: req.body.userId,
     };
-    //MULTER ET LES VALEURS PAR DEFAUT
+    //MULTER
     let sql = `INSERT INTO post (text, imageUrl, date, authorId) VALUES (?,?,?,?);`;
     pool.execute(sql, [post.text, post.imageUrl, post.date, post.authorId], function (err, result) {
         if (err) throw err;

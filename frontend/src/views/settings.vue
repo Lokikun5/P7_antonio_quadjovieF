@@ -203,9 +203,9 @@ export default {
       if (validPassword.test(this.password)) {
         console.log(true);
         const self = this;
-        axios
-          .put(
-            `http://localhost:3000/api/user/modifyPassword/${self.userId}`,
+        
+            
+          axios.put(`http://localhost:3000/api/user/modifyPassword/${self.userId}`,
             {
               oldPassword: self.oldPassword,
               password: self.password,
@@ -254,9 +254,9 @@ export default {
         validName.test(this.prenom) ||
         validName.test(this.desc)
       ) {
-        axios
-          .put(
-            `http://localhost:3000/api/user/modifyAccount/${self.userId}`,
+       
+           
+            axios.put(`http://localhost:3000/api/user/modifyAccount/${self.userId}`,
             {
               prenom: self.prenom,
               nom: self.nom,
